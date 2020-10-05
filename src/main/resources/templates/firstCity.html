@@ -1,0 +1,16 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>"Игра в города"</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body>
+<p th:text="'Я выбираю город, ' + ${city} " />
+<p th:text="'Вам на букву ' + ${lastLetter}" />
+<form action="/begin/end" method="post">
+    <input type="text" name="title" placeholder="Если надоело играть - введите текст">
+    <button type="submit" class="btn btn-success">Добавить</button>
+    <p th:text="${goodbye} " />
+</form>
+</body>
+</html>
